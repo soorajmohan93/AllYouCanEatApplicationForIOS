@@ -54,6 +54,9 @@ class OrderList
         orderList.append(order)
     }
 
+    //Quantity is changed in this method. If the item is added for first time then the item is appended
+    //If quantity is changed for existing order in item, then quanity is changed
+    //If quantity is 0, then item is deleted from order
     func changeQuantityFromName(order: Order){
 
         if let foundIndex = orderList.firstIndex(where: { $0.itemName == order.itemName })

@@ -9,6 +9,7 @@ import UIKit
 
 class AddItemTableViewController: UITableViewController {
 
+    //This view controller is for New Order Table View Controller - It shows all available items
     var itemList = ItemList()
     var orderList = OrderList()
     
@@ -48,17 +49,8 @@ class AddItemTableViewController: UITableViewController {
         
         cell.textLabel?.numberOfLines = 3
         cell.detailTextLabel?.numberOfLines = 4
-//        if (item.quantity == nil)
-//        {
-//            cell.textLabel!.text = item.itemName + " (C$" + item.price.description + ")"
-//
-//        }
-//        else if (item.quantity == 0){
-//            cell.textLabel!.text = item.itemName + " (C$" + item.price.description + ")"
-//        }
-//        else{
-//            cell.textLabel!.text = item.itemName + " (C$" + item.price.description + ")" + "\nQuantity Selected: " + item.quantity.description
-//        }
+
+        //If item quantity is added, then the title includes the quantity as well
         var textForTitle: String!
         if let foundIndex = orderList.orderList.firstIndex(where: { $0.itemName == item.itemName })
         {
@@ -126,6 +118,7 @@ class AddItemTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        //segue for table view item selection
         if (segue.identifier == "AddToCartView")
         {
             let dest = segue.destination as! AddOrderItemViewController
@@ -135,6 +128,7 @@ class AddItemTableViewController: UITableViewController {
                 dest.orderList = orderList
             }
         }
+        //segue for cart
         else if (segue.identifier == "cartTableView")
         {
             let dest = segue.destination as! CartTableViewController

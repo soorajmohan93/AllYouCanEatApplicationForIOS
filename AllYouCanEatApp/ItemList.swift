@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// All Items are populated here
 class ItemList{
     
     var list = [Item]()

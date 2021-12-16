@@ -9,8 +9,8 @@ import UIKit
 
 class AddOrderItemViewController: UIViewController {
 
+    //This is add to cart view controller, user can add or change quantity and add them to cart
     var item: Item!
-//    var itemList: ItemList!
     var orderList: OrderList!
     
     
@@ -20,7 +20,7 @@ class AddOrderItemViewController: UIViewController {
     
     @IBOutlet weak var totalPriceText: UILabel!
     @IBAction func reduceQty(_ sender: Any) {
-        
+        //Button to reduce quantity
         var quantity:Int? = Int(textViewQuantity.text!)
         if (quantity! > 0)
         {
@@ -34,6 +34,7 @@ class AddOrderItemViewController: UIViewController {
     }
     
     @IBAction func increaseQty(_ sender: Any) {
+        //Button to increase quantity
         var quantity:Int? = Int(textViewQuantity.text!)
         quantity = quantity! + 1
         textViewQuantity.text = String(quantity!)
@@ -45,9 +46,11 @@ class AddOrderItemViewController: UIViewController {
     @IBOutlet weak var textViewQuantity: UITextField!
     
     @IBAction func addItemOrder(_ sender: Any) {
+        //add item button
         let order = Order(itemName: item.itemName)
         order.setUnitPrice(unitPrice: item.price)
         order.setQuantity(quantity: Int(textViewQuantity.text!)!)
+//        item is added when the quanity is changed first time, then when quantity changes, the existing item is updated
         orderList.changeQuantityFromName(order: order)
         orderList.saveList()
     }
@@ -60,18 +63,11 @@ class AddOrderItemViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        labelItemName.text = item.itemName + " (C$ " + item.price.description + " )"
+        
         labelItemName.attributedText = NSAttributedString(string: item.itemName + " (C$ " + item.price.description + " )")
         labelItemDescription.attributedText = NSAttributedString(string: item.itemDescription)
-//        if (item.quantity != nil)
-//        {
-//            textViewQuantity.text = item.quantity.description
-//        }
-//        else
-//        {
-//            textViewQuantity.text = String("0")
-//        }
-        
+
+        //If quantity was added before then it is populated in the quantity field
         if let foundIndex = orderList.orderList.firstIndex(where: { $0.itemName == item.itemName })
         {
             let itemInOrder = orderList.orderList[foundIndex]

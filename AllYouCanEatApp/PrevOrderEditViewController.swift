@@ -9,7 +9,7 @@ import UIKit
 
 class PrevOrderEditViewController: UIViewController {
     
-    
+    //View controller for Edit order Item. Quantity can be changed for order items here
     var order: PrevOrder!
     var orderList: PrevOrderList!
     var section: Int!
@@ -47,7 +47,8 @@ class PrevOrderEditViewController: UIViewController {
     
     
     @IBAction func updateOrder(_ sender: Any) {
-        
+        /*order quantity is updated when update button is clicked. if all order items are removed from order,
+         the section is removed*/
         order.setQuantity(quantity: Int(textViewQuantity.text!)!)
         orderList.changeQuantityFromName(order: order, section: section)
         orderList.deleteSectionIfNeeded(section: section)

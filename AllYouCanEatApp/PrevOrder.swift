@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+//Class for Previous order and order items
 class PrevOrder: NSObject, NSCoding{
     private (set) var itemName: String
     private (set) var quantity: Int!
@@ -22,7 +22,7 @@ class PrevOrder: NSObject, NSCoding{
         coder.encode(unitPrice, forKey: "unitPrice")
     }
     
-    //    //decoding object from archiving
+//     decoding object from archiving
     required init?(coder: NSCoder) {
         itemName = coder.decodeObject(forKey: "itemName") as! String
         quantity = coder.decodeObject(forKey: "quantity") as? Int

@@ -8,7 +8,10 @@
 import UIKit
 
 class PrevOrderTableViewController: UITableViewController {
-
+// This is table view controller for previous order. It lists out previous orders in sections
+    //It can delete all orders from right bar button
+    //swipe delete each item
+    //edit quantity by selecting the order item, making quantity 0, deletes the item
     var prevOrder = PrevOrderList()
     
     override func viewDidLoad() {
@@ -38,7 +41,7 @@ class PrevOrderTableViewController: UITableViewController {
     }
 
     @IBAction func deleteAllOrders(_ sender: Any) {
-        
+     // Delete all order using right bar button
         prevOrder.deleteAll();
         prevOrder.saveList();
         tableView.reloadData()
@@ -46,7 +49,7 @@ class PrevOrderTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "prevOrder", for: indexPath)
-
+        
         let order = prevOrder.orderList[indexPath.section][indexPath.row]
         
         let totalPrice = Float(order.quantity) * order.unitPrice
@@ -57,6 +60,7 @@ class PrevOrderTableViewController: UITableViewController {
         return cell
     }
     
+    //Each section shows order number
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Order Number:" + (section+1).description
     }

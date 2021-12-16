@@ -9,7 +9,7 @@ import UIKit
 
 class CartTableViewController: UITableViewController {
 
-   
+   //Table view controller for cart. User can review order and delete order if needed and also place the order
 
     var orderList: OrderList!
     var prevOrderList = PrevOrderList()
@@ -32,13 +32,11 @@ class CartTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        //total order value is displayed on the button
         var totalOrderPrice:Float = 0.0
-        
         for order in orderList.orderList {
             totalOrderPrice += Float(order.quantity!) * order.unitPrice
         }
-        
-        
         placeButtonOrderText.setTitle("Place Order (C$" + totalOrderPrice.description + ")", for: .normal)
     }
 //
@@ -64,7 +62,8 @@ class CartTableViewController: UITableViewController {
         if(!orderList.orderList.isEmpty)
         {
             prevOrderList.orderList.append([])
-            
+            //If the order is not empty then a new section is created in PrevOrderList object
+            //Each order item is picked and added into the new section
             for order in orderList.orderList {
                 let prevOrder =  PrevOrder(itemName: order.itemName)
                 prevOrder.setUnitPrice(unitPrice: order.unitPrice)
@@ -73,6 +72,7 @@ class CartTableViewController: UITableViewController {
             }
             prevOrderList.saveList()
             
+            //Once order is created, all the items in OrderList object is cleared for a fresh order
             orderList.deleteAll()
             orderList.saveList()
         }

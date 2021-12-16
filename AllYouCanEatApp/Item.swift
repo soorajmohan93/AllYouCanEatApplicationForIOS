@@ -7,45 +7,17 @@
 
 import Foundation
 
-
+//Class for all available item
 class Item {
     var itemName: String
     var itemDescription: String
-    var price: Float!
-//    private (set) var quantity: Int!
-    
-    
+    var price: Float
 
-    
-    
     
     init(itemName: String, itemDescription: String, price: Float){
         self.itemName = itemName
         self.itemDescription = itemDescription
         self.price = price
     }
-    
-    func setName( itemName: String)
-    {
-        self.itemName = itemName
-    }
-    
-    func setDescription( itemDescription: String)
-    {
-        self.itemDescription = itemDescription
-    }
-    
-    func setPrice( price: Float)
-    {
-        self.price = price
-    }
-    
-//    func setQuantity( quantity: Int)
-//    {
-//        self.quantity = quantity
-//    }
-    
-    
-    
-    
+
 }

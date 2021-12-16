@@ -53,6 +53,10 @@ class PrevOrderList
         orderList[section].append(prevOrder)
     }
 
+    
+    //Quantity is changed in this method. If the item is added for first time then the item is appended
+    //If quantity is changed for existing order in item, then quanity is changed
+    //If quantity is 0, then item is deleted from order
     func changeQuantityFromName(order: PrevOrder, section: Int){
 
         if let foundIndex = orderList[section].firstIndex(where: { $0.itemName == order.itemName })
@@ -75,6 +79,7 @@ class PrevOrderList
         
     }
     
+    //If all items in  a section is deleted then section is deleted
     func deleteSectionIfNeeded(section: Int)
     {
         if (orderList[section].isEmpty)

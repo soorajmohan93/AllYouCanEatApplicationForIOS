@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// This class is for items in cart. Archiving is done on this class
 class Order: NSObject, NSCoding{
     private (set) var itemName: String
     private (set) var quantity: Int!
