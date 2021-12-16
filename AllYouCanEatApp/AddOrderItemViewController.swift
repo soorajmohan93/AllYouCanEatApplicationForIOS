@@ -60,7 +60,8 @@ class AddOrderItemViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        labelItemName.text = item.itemName + " (C$ " + item.price.description + " )"
+//        labelItemName.text = item.itemName + " (C$ " + item.price.description + " )"
+        labelItemName.attributedText = NSAttributedString(string: item.itemName + " (C$ " + item.price.description + " )")
         labelItemDescription.attributedText = NSAttributedString(string: item.itemDescription)
 //        if (item.quantity != nil)
 //        {

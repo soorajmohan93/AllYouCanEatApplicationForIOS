@@ -12,7 +12,6 @@ class Order: NSObject, NSCoding{
     private (set) var itemName: String
     private (set) var quantity: Int!
     private (set) var unitPrice: Float!
-    private (set) var orderId: Int!
     
     
     
@@ -21,7 +20,6 @@ class Order: NSObject, NSCoding{
         coder.encode(itemName, forKey: "itemName")
         coder.encode(quantity, forKey: "quantity")
         coder.encode(unitPrice, forKey: "unitPrice")
-        coder.encode(orderId, forKey: "orderId" )
     }
     
     //    //decoding object from archiving
@@ -29,7 +27,6 @@ class Order: NSObject, NSCoding{
         itemName = coder.decodeObject(forKey: "itemName") as! String
         quantity = coder.decodeObject(forKey: "quantity") as? Int
         unitPrice = coder.decodeObject(forKey: "unitPrice") as? Float
-        orderId = coder.decodeObject(forKey: "orderId") as? Int
     }
     
     init(itemName: String){
@@ -49,10 +46,4 @@ class Order: NSObject, NSCoding{
     {
         self.unitPrice = unitPrice
     }
-    
-    func setOrderId(orderId: Int)
-    {
-        self.orderId = orderId
-    }
-    
 }

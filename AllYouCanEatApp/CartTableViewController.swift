@@ -14,6 +14,10 @@ class CartTableViewController: UITableViewController {
     var orderList: OrderList!
     var prevOrderList = PrevOrderList()
 
+    
+    @IBOutlet weak var placeButtonOrderText: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +27,19 @@ class CartTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        var totalOrderPrice:Float = 0.0
+        
+        for order in orderList.orderList {
+            totalOrderPrice += Float(order.quantity!) * order.unitPrice
+        }
+        
+        
+        placeButtonOrderText.setTitle("Place Order (C$" + totalOrderPrice.description + ")", for: .normal)
     }
 //
 //    // MARK: - Table view data source
@@ -44,21 +61,21 @@ class CartTableViewController: UITableViewController {
 //            sectionForPrevOrder = sectionForPrevOrder - 1
 //        }
         
-        
-        prevOrderList.orderList.append([])
-        
-        for order in orderList.orderList {
-            let prevOrder =  PrevOrder(itemName: order.itemName)
-            prevOrder.setUnitPrice(unitPrice: order.unitPrice)
-            prevOrder.setQuantity(quantity: order.quantity)
-            prevOrderList.addOrder(prevOrder: prevOrder, section: sectionForPrevOrder)
+        if(!orderList.orderList.isEmpty)
+        {
+            prevOrderList.orderList.append([])
+            
+            for order in orderList.orderList {
+                let prevOrder =  PrevOrder(itemName: order.itemName)
+                prevOrder.setUnitPrice(unitPrice: order.unitPrice)
+                prevOrder.setQuantity(quantity: order.quantity)
+                prevOrderList.addOrder(prevOrder: prevOrder, section: sectionForPrevOrder)
+            }
+            prevOrderList.saveList()
+            
+            orderList.deleteAll()
+            orderList.saveList()
         }
-        prevOrderList.saveList()
-        
-        orderList.deleteAll()
-        orderList.saveList()
-        
-        
     }
     //
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,6 +91,20 @@ class CartTableViewController: UITableViewController {
 
 
         return cell
+    }
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            orderList.deleteOrder(indexPath: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            orderList.saveList()
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+        tableView.reloadData()
+        viewWillAppear(true)
     }
 //
 //
