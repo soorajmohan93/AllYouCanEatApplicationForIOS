@@ -75,6 +75,7 @@ class CartTableViewController: UITableViewController {
             //Once order is created, all the items in OrderList object is cleared for a fresh order
             orderList.deleteAll()
             orderList.saveList()
+            
         }
     }
     //

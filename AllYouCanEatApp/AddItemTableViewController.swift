@@ -15,12 +15,15 @@ class AddItemTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    // When buttons on add to order and cart view are clicked, it needs to come back to the new order view
+    @IBAction func unwind(unwindSegue: UIStoryboardSegue) {
     }
     
     override func viewWillAppear(_ animated: Bool) {

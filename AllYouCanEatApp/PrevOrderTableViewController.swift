@@ -12,11 +12,14 @@ class PrevOrderTableViewController: UITableViewController {
     //It can delete all orders from right bar button
     //swipe delete each item
     //edit quantity by selecting the order item, making quantity 0, deletes the item
-    var prevOrder = PrevOrderList()
+    var prevOrder: PrevOrderList!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
+        if (prevOrder == nil)
+        {
+            prevOrder = PrevOrderList()
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,8 +27,16 @@ class PrevOrderTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    //Once item quantity is updated in edit item view, the previous order view is called for further updates
+    @IBAction func unwindToPrevOrder(unwindSegue: UIStoryboardSegue) {
+        viewDidLoad()
         tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+        
     }
 
     // MARK: - Table view data source
@@ -124,7 +135,6 @@ class PrevOrderTableViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow{
             let order = prevOrder.orderList[indexPath.section][indexPath.row]
             dest.order = order
-            dest.orderList = prevOrder
             dest.section = indexPath.section
         }
     }

@@ -31,6 +31,13 @@ class AddOrderItemViewController: UIViewController {
         let totalPrice = Float(quantity!) * item.price
         totalPriceText.text = "Total Price: C$ " + totalPrice.description
         
+        totalPriceText.center.x = view.center.x
+        totalPriceText.center.x -= view.bounds.width
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: {
+            self.totalPriceText.center.x += self.view.bounds.width
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+        
     }
     
     @IBAction func increaseQty(_ sender: Any) {
@@ -41,6 +48,14 @@ class AddOrderItemViewController: UIViewController {
         
         let totalPrice = Float(quantity!) * item.price
         totalPriceText.text = "Total Price: C$ " + totalPrice.description
+        
+        totalPriceText.center.x = view.center.x
+        totalPriceText.center.x -= view.bounds.width
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: {
+            self.totalPriceText.center.x += self.view.bounds.width
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+        
     }
     
     @IBOutlet weak var textViewQuantity: UITextField!
@@ -55,17 +70,30 @@ class AddOrderItemViewController: UIViewController {
         orderList.saveList()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         labelItemName.attributedText = NSAttributedString(string: item.itemName + " (C$ " + item.price.description + " )")
+        labelItemName.center.x = view.center.x
+        labelItemName.center.x -= view.bounds.width
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: {
+            self.labelItemName.center.x += self.view.bounds.width
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+        
         labelItemDescription.attributedText = NSAttributedString(string: item.itemDescription)
+        
+        labelItemDescription.center.x = view.center.x
+        labelItemDescription.center.x -= view.bounds.width
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: {
+            self.labelItemDescription.center.x += self.view.bounds.width
+            self.view.layoutIfNeeded()
+            }, completion: nil)
 
         //If quantity was added before then it is populated in the quantity field
         if let foundIndex = orderList.orderList.firstIndex(where: { $0.itemName == item.itemName })
@@ -88,6 +116,13 @@ class AddOrderItemViewController: UIViewController {
         
         let totalPrice = Float(textViewQuantity.text!)! * item.price
         totalPriceText.text = "Total Price: C$ " + totalPrice.description
+        
+        totalPriceText.center.x = view.center.x
+        totalPriceText.center.x -= view.bounds.width
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: {
+            self.totalPriceText.center.x += self.view.bounds.width
+            self.view.layoutIfNeeded()
+            }, completion: nil)
         
     }
     /*

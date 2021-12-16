@@ -30,7 +30,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create New Order"/>
                                 <connections>
-                                    <segue destination="tR9-6U-TuR" kind="show" id="JSi-di-dG4"/>
+                                    <segue destination="mtk-nW-Vdt" kind="show" id="TjM-4v-9Du"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ0-oS-rep">
@@ -41,7 +41,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Previous Order"/>
                                 <connections>
-                                    <segue destination="rK9-br-ihs" kind="show" id="BcZ-0D-aea"/>
+                                    <segue destination="hoQ-eA-7Pz" kind="show" id="Urw-k5-BZn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +67,7 @@
             <objects>
                 <tableViewController id="mtk-nW-Vdt" customClass="AddItemTableViewController" customModule="AllYouCanEatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="16y-mn-T7O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -116,24 +116,24 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulI-Br-i4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4221.739130434783" y="150.66964285714286"/>
+            <point key="canvasLocation" x="3925" y="151"/>
         </scene>
         <!--Add Item To Cart-->
         <scene sceneID="c46-Ve-6gK">
             <objects>
                 <viewController id="DCJ-e8-xeL" customClass="AddOrderItemViewController" customModule="AllYouCanEatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n09-nz-L2w">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX2-mn-RWp">
-                                <rect key="frame" x="192" y="106" width="30.5" height="82"/>
+                                <rect key="frame" x="172.5" y="138" width="69.5" height="50"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Item">
+                                    <fragment content="Item Text">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" metaFont="system" size="15"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                            <color key="NSColor" red="0.050114516956114782" green="0.029604986961479784" blue="0.05672116623711343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="16" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -187,7 +187,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Add Item"/>
                                 <connections>
                                     <action selector="addItemOrder:" destination="DCJ-e8-xeL" eventType="touchUpInside" id="gTm-eN-4oC"/>
-                                    <segue destination="tR9-6U-TuR" kind="show" id="upF-PU-smg"/>
+                                    <segue destination="oi7-9Q-hKO" kind="unwind" unwindAction="unwindWithUnwindSegue:" id="WFv-8z-maZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price: C$ 0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h88-6w-Bey">
@@ -238,6 +238,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6S4-0X-az1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="oi7-9Q-hKO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4984.057971014493" y="150.66964285714286"/>
         </scene>
@@ -246,7 +247,7 @@
             <objects>
                 <tableViewController id="IlY-Vl-bY7" customClass="CartTableViewController" customModule="AllYouCanEatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QH0-0F-T2j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LIj-r2-74B">
@@ -256,7 +257,7 @@
                             <buttonConfiguration key="configuration" style="filled" title="Place Order"/>
                             <connections>
                                 <action selector="placeOrder:" destination="IlY-Vl-bY7" eventType="touchUpInside" id="eQf-X4-2Ud"/>
-                                <segue destination="Rjd-CY-RKx" kind="show" id="o7Z-dM-zd5"/>
+                                <segue destination="mbC-wb-5ar" kind="unwind" unwindAction="unwindWithUnwindSegue:" id="YPd-as-xCw"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -296,6 +297,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vox-m1-6Xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mbC-wb-5ar" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5705.7971014492759" y="150.66964285714286"/>
         </scene>
@@ -350,7 +352,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ikF-Yo-em5" kind="show" id="Z5s-0o-iNh"/>
+                                    <segue destination="ikF-Yo-em5" kind="show" id="Ue4-NX-OOQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -380,11 +382,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAn-L6-3tr">
-                                <rect key="frame" x="191" y="158" width="32" height="48"/>
+                                <rect key="frame" x="190.5" y="158" width="33" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="lAI-n0-gXl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -421,6 +423,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Update Item"/>
                                 <connections>
                                     <action selector="updateOrder:" destination="ikF-Yo-em5" eventType="touchUpInside" id="UGu-cv-Lnv"/>
+                                    <segue destination="Jy8-hs-mte" kind="unwind" unwindAction="unwindToPrevOrderWithUnwindSegue:" id="4I8-XZ-N1B"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price: C$ 0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMo-qV-sUK">
@@ -465,52 +468,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4W-Gq-J46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Jy8-hs-mte" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5215.9420289855079" y="851.78571428571422"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="c3j-Nj-FNG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rK9-br-ihs" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="OTt-lB-Mda"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lqs-F7-yfl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="hoQ-eA-7Pz" kind="relationship" relationship="rootViewController" id="A3N-Og-xCX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jbe-zq-C9U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3405.7971014492755" y="851.78571428571422"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mdC-yj-uIp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tR9-6U-TuR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="225-tH-Yn8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hkm-Vk-eZw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mtk-nW-Vdt" kind="relationship" relationship="rootViewController" id="6IH-Yv-Zac"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zHj-PD-raQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3311.594202898551" y="150.66964285714286"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="upF-PU-smg"/>
-        <segue reference="lVS-Tt-JCL"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="minus" catalog="system" width="128" height="24"/>
