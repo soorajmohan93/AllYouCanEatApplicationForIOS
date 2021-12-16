@@ -41,7 +41,12 @@ class PrevOrderList
     }
 
     func deleteOrder(indexPath: IndexPath){
-        orderList.remove(at: indexPath.row)
+        orderList[indexPath.section].remove(at: indexPath.row)
+    }
+    
+    func deleteAll()
+    {
+        orderList.removeAll()
     }
 
     func addOrder(prevOrder: PrevOrder, section: Int){
@@ -52,14 +57,14 @@ class PrevOrderList
 
         if let foundIndex = orderList[section].firstIndex(where: { $0.itemName == order.itemName })
         {
-            let itemToChange = orderList[foundIndex]
+            let itemToChange = orderList[section][foundIndex]
             if (order.quantity > 0)
             {
-                itemToChange[section].setQuantity(quantity: order.quantity)
+                itemToChange.setQuantity(quantity: order.quantity)
             }
             else
             {
-                orderList.remove(at: foundIndex)
+                orderList[section].remove(at: foundIndex)
             }
         }
         else
@@ -68,6 +73,14 @@ class PrevOrderList
         }
 
         
+    }
+    
+    func deleteSectionIfNeeded(section: Int)
+    {
+        if (orderList[section].isEmpty)
+        {
+            orderList.remove(at: section)
+        }
     }
 
 }

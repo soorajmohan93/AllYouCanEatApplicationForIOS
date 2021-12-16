@@ -67,8 +67,6 @@ class CartTableViewController: UITableViewController {
         let order = orderList.orderList[indexPath.row]
 
         cell.textLabel?.numberOfLines = 3
-        cell.detailTextLabel?.numberOfLines = 4
-        
         let totalPrice = Float(order.quantity) * order.unitPrice
 
         cell.textLabel!.text = order.itemName + " (C$" + totalPrice.description + ")"

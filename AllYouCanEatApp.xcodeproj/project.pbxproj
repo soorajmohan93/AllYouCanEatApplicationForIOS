@@ -23,6 +23,7 @@
 		31E4DB05276AF9BF003905D9 /* PrevOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4DB04276AF9BF003905D9 /* PrevOrder.swift */; };
 		31E4DB07276AF9D3003905D9 /* PrevOrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4DB06276AF9D3003905D9 /* PrevOrderList.swift */; };
 		31E4DB09276B0578003905D9 /* PrevOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4DB08276B0578003905D9 /* PrevOrderTableViewController.swift */; };
+		31E4DB0F276B0ECF003905D9 /* PrevOrderEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4DB0E276B0ECF003905D9 /* PrevOrderEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		31E4DB04276AF9BF003905D9 /* PrevOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevOrder.swift; sourceTree = "<group>"; };
 		31E4DB06276AF9D3003905D9 /* PrevOrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevOrderList.swift; sourceTree = "<group>"; };
 		31E4DB08276B0578003905D9 /* PrevOrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevOrderTableViewController.swift; sourceTree = "<group>"; };
+		31E4DB0E276B0ECF003905D9 /* PrevOrderEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevOrderEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				316B47F1275F0B2A000AEB4C /* AddOrderItemViewController.swift */,
 				31E4DB02276AD8A7003905D9 /* CartTableViewController.swift */,
 				31E4DB08276B0578003905D9 /* PrevOrderTableViewController.swift */,
+				31E4DB0E276B0ECF003905D9 /* PrevOrderEditViewController.swift */,
 				318A3DF4274B58BA00530F42 /* Main.storyboard */,
 				318A3DF7274B58BB00530F42 /* Assets.xcassets */,
 				318A3DF9274B58BB00530F42 /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 				31E4DB09276B0578003905D9 /* PrevOrderTableViewController.swift in Sources */,
 				316B47EC275EF348000AEB4C /* Item.swift in Sources */,
 				316B47F6275F21EC000AEB4C /* OrderList.swift in Sources */,
+				31E4DB0F276B0ECF003905D9 /* PrevOrderEditViewController.swift in Sources */,
 				31E4DB03276AD8A7003905D9 /* CartTableViewController.swift in Sources */,
 				316B47F4275F216A000AEB4C /* Order.swift in Sources */,
 				316B47EE275EF45A000AEB4C /* ItemList.swift in Sources */,

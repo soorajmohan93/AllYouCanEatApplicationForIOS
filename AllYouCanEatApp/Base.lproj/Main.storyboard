@@ -30,7 +30,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add New Order"/>
                                 <connections>
-                                    <segue destination="WTR-RR-G06" kind="show" id="jtW-em-E1m"/>
+                                    <segue destination="mtk-nW-Vdt" kind="show" id="JSi-di-dG4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ0-oS-rep">
@@ -41,7 +41,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Previous Order"/>
                                 <connections>
-                                    <segue destination="ymf-r0-qr2" kind="show" id="29i-40-aMr"/>
+                                    <segue destination="rK9-br-ihs" kind="show" id="BcZ-0D-aea"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +67,7 @@
             <objects>
                 <tableViewController id="mtk-nW-Vdt" customClass="AddItemTableViewController" customModule="AllYouCanEatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="16y-mn-T7O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -116,18 +116,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulI-Br-i4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4202.898550724638" y="150.66964285714286"/>
+            <point key="canvasLocation" x="3312" y="151"/>
         </scene>
         <!--Add Order Item View Controller-->
         <scene sceneID="c46-Ve-6gK">
             <objects>
                 <viewController id="DCJ-e8-xeL" customClass="AddOrderItemViewController" customModule="AllYouCanEatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n09-nz-L2w">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX2-mn-RWp">
-                                <rect key="frame" x="107" y="138" width="200" height="50"/>
+                                <rect key="frame" x="107" y="50" width="200" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="500" constant="200" id="IDF-bR-JSg"/>
                                 </constraints>
@@ -184,7 +184,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Add Item"/>
                                 <connections>
                                     <action selector="addItemOrder:" destination="DCJ-e8-xeL" eventType="touchUpInside" id="gTm-eN-4oC"/>
-                                    <segue destination="WTR-RR-G06" kind="show" id="X95-zi-ldL"/>
+                                    <segue destination="mtk-nW-Vdt" kind="show" id="upF-PU-smg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price: C$ 0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h88-6w-Bey">
@@ -234,14 +234,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6S4-0X-az1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5047.826086956522" y="150.66964285714286"/>
+            <point key="canvasLocation" x="4074" y="151"/>
         </scene>
         <!--Cart Table View Controller-->
         <scene sceneID="AoX-Qx-eb6">
             <objects>
                 <tableViewController id="IlY-Vl-bY7" customClass="CartTableViewController" customModule="AllYouCanEatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QH0-0F-T2j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LIj-r2-74B">
@@ -289,7 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vox-m1-6Xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5917.3913043478269" y="150.66964285714286"/>
+            <point key="canvasLocation" x="4797" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tH1-bL-9HN">
@@ -309,29 +309,10 @@
             </objects>
             <point key="canvasLocation" x="1752" y="151"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="oox-H4-YkJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WTR-RR-G06" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="1Pb-iJ-W5h"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tg9-FF-pHG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mtk-nW-Vdt" kind="relationship" relationship="rootViewController" id="gVo-z3-P6D"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zAj-hx-8k3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3292.753623188406" y="150.66964285714286"/>
-        </scene>
-        <!--Table View Controller-->
+        <!--Previous Orders-->
         <scene sceneID="KkH-PY-Rxo">
             <objects>
-                <tableViewController id="hoQ-eA-7Pz" sceneMemberID="viewController">
+                <tableViewController id="hoQ-eA-7Pz" customClass="PrevOrderTableViewController" customModule="AllYouCanEatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BoX-QX-Ygp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,6 +341,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ikF-Yo-em5" kind="show" id="Z5s-0o-iNh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -367,41 +351,142 @@
                             <outlet property="delegate" destination="hoQ-eA-7Pz" id="mfe-x0-j06"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yWp-sK-0xA"/>
+                    <navigationItem key="navigationItem" title="Previous Orders" id="yWp-sK-0xA">
+                        <barButtonItem key="rightBarButtonItem" title="Delete All" image="xmark.bin.fill" catalog="system" id="aBH-GY-hzb">
+                            <connections>
+                                <action selector="deleteAllOrders:" destination="hoQ-eA-7Pz" id="goc-4O-tJt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xp7-z6-CHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3959.420289855073" y="852.45535714285711"/>
+            <point key="canvasLocation" x="4315.9420289855079" y="851.78571428571422"/>
+        </scene>
+        <!--Prev Order Edit View Controller-->
+        <scene sceneID="Kge-Xj-UUQ">
+            <objects>
+                <viewController id="ikF-Yo-em5" customClass="PrevOrderEditViewController" customModule="AllYouCanEatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HbH-aT-Mqp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAn-L6-3tr">
+                                <rect key="frame" x="107" y="188" width="200" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="500" constant="200" id="FF5-tM-pBo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oiw-g1-CQt">
+                                <rect key="frame" x="187" y="321" width="40" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="4n7-1g-6L7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLG-5l-sgP">
+                                <rect key="frame" x="100" y="322.5" width="41.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system"/>
+                                <connections>
+                                    <action selector="reduceQty:" destination="ikF-Yo-em5" eventType="touchUpInside" id="lll-aM-e3G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cw5-bm-jsT">
+                                <rect key="frame" x="272.5" y="322.5" width="41.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="increaseQty:" destination="ikF-Yo-em5" eventType="touchUpInside" id="Ls2-DQ-JS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sn-Oe-Pmh">
+                                <rect key="frame" x="155" y="445.5" width="104" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="500" constant="90" id="76t-RH-Ahh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Update Item"/>
+                                <connections>
+                                    <action selector="updateOrder:" destination="ikF-Yo-em5" eventType="touchUpInside" id="UGu-cv-Lnv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price: C$ 0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMo-qV-sUK">
+                                <rect key="frame" x="10" y="377" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SdW-Vt-3sK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Sn-Oe-Pmh" firstAttribute="top" secondItem="gMo-qV-sUK" secondAttribute="bottom" constant="47.5" id="2V4-ib-owf"/>
+                            <constraint firstItem="WAn-L6-3tr" firstAttribute="top" secondItem="SdW-Vt-3sK" secondAttribute="top" constant="100" id="4qC-LV-AmA"/>
+                            <constraint firstItem="gMo-qV-sUK" firstAttribute="centerX" secondItem="HbH-aT-Mqp" secondAttribute="centerX" id="AV8-df-OjE"/>
+                            <constraint firstItem="gMo-qV-sUK" firstAttribute="leading" secondItem="SdW-Vt-3sK" secondAttribute="leading" constant="10" id="Iwc-y9-Mxh"/>
+                            <constraint firstItem="gMo-qV-sUK" firstAttribute="top" secondItem="Oiw-g1-CQt" secondAttribute="bottom" constant="22" id="Jbs-63-lKn"/>
+                            <constraint firstItem="SdW-Vt-3sK" firstAttribute="trailing" secondItem="gMo-qV-sUK" secondAttribute="trailing" constant="10" id="TMt-z3-Rb8"/>
+                            <constraint firstItem="Oiw-g1-CQt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VLG-5l-sgP" secondAttribute="trailing" constant="8" symbolic="YES" id="Tqe-Ql-fcV"/>
+                            <constraint firstItem="WAn-L6-3tr" firstAttribute="centerX" secondItem="HbH-aT-Mqp" secondAttribute="centerX" id="UU0-MX-3pM"/>
+                            <constraint firstItem="2Sn-Oe-Pmh" firstAttribute="centerX" secondItem="HbH-aT-Mqp" secondAttribute="centerX" id="WrU-A2-8YZ"/>
+                            <constraint firstItem="Cw5-bm-jsT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Oiw-g1-CQt" secondAttribute="trailing" constant="8" symbolic="YES" id="ZYs-sE-3u3"/>
+                            <constraint firstItem="Oiw-g1-CQt" firstAttribute="centerX" secondItem="2Sn-Oe-Pmh" secondAttribute="centerX" id="bUC-xb-0EZ"/>
+                            <constraint firstItem="VLG-5l-sgP" firstAttribute="baseline" secondItem="Cw5-bm-jsT" secondAttribute="baseline" id="d6a-eh-sdY"/>
+                            <constraint firstItem="VLG-5l-sgP" firstAttribute="centerY" secondItem="Oiw-g1-CQt" secondAttribute="centerY" id="gEj-Kx-Nzd"/>
+                            <constraint firstItem="SdW-Vt-3sK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gMo-qV-sUK" secondAttribute="trailing" id="kE4-br-eIb"/>
+                            <constraint firstItem="2Sn-Oe-Pmh" firstAttribute="centerX" secondItem="HbH-aT-Mqp" secondAttribute="centerX" id="kYI-Xc-UbL"/>
+                            <constraint firstItem="SdW-Vt-3sK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gMo-qV-sUK" secondAttribute="trailing" id="qY9-Oh-97N"/>
+                            <constraint firstItem="SdW-Vt-3sK" firstAttribute="trailing" secondItem="Cw5-bm-jsT" secondAttribute="trailing" constant="100" id="r6m-CM-mdL"/>
+                            <constraint firstItem="VLG-5l-sgP" firstAttribute="leading" secondItem="SdW-Vt-3sK" secondAttribute="leading" constant="100" id="uVJ-vs-ulz"/>
+                            <constraint firstItem="gMo-qV-sUK" firstAttribute="centerX" secondItem="HbH-aT-Mqp" secondAttribute="centerX" id="xII-pU-31Z"/>
+                            <constraint firstItem="Oiw-g1-CQt" firstAttribute="top" secondItem="HbH-aT-Mqp" secondAttribute="top" constant="321" id="zkW-6i-acq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gX4-Db-Agi"/>
+                    <connections>
+                        <outlet property="labelItemName" destination="WAn-L6-3tr" id="W1l-lc-nLx"/>
+                        <outlet property="textViewQuantity" destination="Oiw-g1-CQt" id="TRb-8N-5Cs"/>
+                        <outlet property="totalPriceText" destination="gMo-qV-sUK" id="AQx-5H-BTu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4W-Gq-J46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5215.9420289855079" y="851.78571428571422"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="JFq-AA-8ie">
+        <scene sceneID="c3j-Nj-FNG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ymf-r0-qr2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rK9-br-ihs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="oyX-sX-aEb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kNa-cb-mfh">
+                    <navigationItem key="navigationItem" id="OTt-lB-Mda"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lqs-F7-yfl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hoQ-eA-7Pz" kind="relationship" relationship="rootViewController" id="U2a-ov-7Bw"/>
+                        <segue destination="hoQ-eA-7Pz" kind="relationship" relationship="rootViewController" id="A3N-Og-xCX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JwE-g4-7rW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jbe-zq-C9U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3049.275362318841" y="852.45535714285711"/>
+            <point key="canvasLocation" x="3405.7971014492755" y="851.78571428571422"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gVo-z3-P6D"/>
-        <segue reference="jtW-em-E1m"/>
-        <segue reference="o7Z-dM-zd5"/>
+        <segue reference="upF-PU-smg"/>
+        <segue reference="lVS-Tt-JCL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="xmark.bin.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

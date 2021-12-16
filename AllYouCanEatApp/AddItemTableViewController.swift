@@ -83,16 +83,6 @@ class AddItemTableViewController: UITableViewController {
         return cell
     }
  
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        switch section{
-        case 0:
-            return "Breakfast"
-        default:
-            return nil
-        }
-        
-    }
 
     /*
     // Override to support conditional editing of the table view.

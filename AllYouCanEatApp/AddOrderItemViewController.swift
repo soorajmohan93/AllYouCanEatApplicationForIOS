@@ -45,16 +45,11 @@ class AddOrderItemViewController: UIViewController {
     @IBOutlet weak var textViewQuantity: UITextField!
     
     @IBAction func addItemOrder(_ sender: Any) {
-        
-//        item.setQuantity(quantity: Int(textViewQuantity.text!)!)
-//        itemList.changeQuantityFromName(itemName: item.itemName, toQuantity: item.quantity)
         let order = Order(itemName: item.itemName)
         order.setUnitPrice(unitPrice: item.price)
         order.setQuantity(quantity: Int(textViewQuantity.text!)!)
         orderList.changeQuantityFromName(order: order)
         orderList.saveList()
-        
-//        itemList.saveList()
     }
     
     override func viewDidLoad() {
@@ -94,7 +89,8 @@ class AddOrderItemViewController: UIViewController {
             textViewQuantity.text = String("0")
         }
         
-            
+        let totalPrice = Float(textViewQuantity.text!)! * item.price
+        totalPriceText.text = "Total Price: C$ " + totalPrice.description
         
     }
     /*
